@@ -181,7 +181,19 @@ Write a function named `copyArray` which takes two arguments: `originArray` and 
 Inside of this function write a for-loop that will iterate through the contents of the `originArray` and pushes each element of that array into `destinationArray`. Console.log your result.
 */
 
+var valuesArray = [99, 66, 829, 1941, 8, 76];//array
 
+var copyValuesArray = [];//empty array
+
+function copyArray(originArray, destinationArray) {
+   for (i = 0; i < originArray.length; i++) {
+      //console.log(valuesArray[i]);
+      destinationArray.push(originArray[i]);//empty array.push(values that ran through the loop from the original array) <-- this will push each element that ran through the loop of the original array into the new array.
+   }
+      return destinationArray;//returns the empty array, now with elements/values.
+}
+copyArray(valuesArray, copyValuesArray);
+console.log(copyValuesArray);
 
 /*Final Boss*/
 
