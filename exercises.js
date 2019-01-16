@@ -115,6 +115,18 @@ Note that every odd index value in `oopsArray` is currently `undefined`. Using a
 [ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]
 */
 
+var oopsArray = [ 'turn', 'down' , 'for' , 'what' ];
+
+var word = "nope";
+
+for (i=0;i<oopsArray.length;i++){
+   //console.log(oopsArray[i]);
+   if (i%2 === 1) {
+      oopsArray.splice(i, 0, word); //add the var = "nope" after the odd values using the .splice method, choosing the starting position, how many values to remove, and replace/add what.
+   }
+}
+console.log(oopsArray);
+
 
 /* 8) Is It There Oops
 Using a for-loop, iterate through the Array stored at `oopsArray` backwards. Console.log your result. It should look like this:
