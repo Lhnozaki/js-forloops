@@ -142,7 +142,7 @@ turn
 
 for (i=0;i<oopsArray.length;i++){
    oopsArray.reverse();
-   console.log(oopsArray[i])
+   console.log(oopsArray[i]);
 }
 
 /* 9) Siesta Time
@@ -155,7 +155,19 @@ Next, write a function named `nap`. This function takes in a single parameter: `
 Inside of this function write a for-loop that will iterate through the `napSchedule` array and console.log the message: `ZzZzZzZz` if the schedule is `true`, otherwise the it will console.log the message: `Gotta get coding!` if the schedule is `false`.
 */
 
+var napSchedule = [false, false, true, false, true, true];
 
+function nap(schedule) {
+   for (i=0;i<schedule.length;i++){
+   //console.log(napSchedule[i]);
+   if (schedule[i] === true){
+      console.log("ZzZzZzZz"); //this will tell the function to display this message. 
+      }else{
+      console.log("Gotta get to coding!");//this will tell the function to display this message.
+      }
+   }
+}
+nap(napSchedule);
 
 /* 10) Copy Pasta
 Declare a variable named `valuesArray` and assign its value to be an array: `[99, 66, 829, 1941, 8, 76]`. 
