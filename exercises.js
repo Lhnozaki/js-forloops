@@ -293,3 +293,54 @@ If the `enrolled` property is set to `true` then change that student's `graduate
 Console.log your result.
 */
 
+var currentCohort = [
+   {
+     name: 'Doug',
+     graduated: false,
+     enrolled: true
+   },
+   {
+     name: 'Pat',
+     graduated: false,
+     enrolled: false
+   },
+   {
+     name: 'Marsha',
+     graduated: false,
+     enrolled: false
+   },
+   {
+     name: 'Moira',
+     graduated: false,
+     enrolled: true
+   },
+   {
+     name: 'Ben',
+     graduated: false,
+     enrolled: true
+   },
+   {
+     name: 'Nigel the Giraffe',
+     graduated: false,
+     enrolled: false
+   },
+   {
+     name: 'Brandon the Shark',
+     graduated: false,
+     enrolled: true
+   }
+ ]
+
+
+function change(arr){
+   for (i=0; i<arr.length;i++){
+      //console.log(arr[i]);
+         if (arr[i].enrolled === true){
+         arr[i].graduated = true;
+      }else{
+         arr[i].graduated = false;
+      }
+   }
+   return arr;
+}
+console.log(change(currentCohort));
