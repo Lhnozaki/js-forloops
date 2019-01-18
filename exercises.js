@@ -271,6 +271,15 @@ Note, please use two for loops to complete this problem
 
 var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo", "Pyramids"],["Rome", "Colosseum"]];
 
+for (city = 0; city < guide.length; city++){
+   for (neighborhood = 0; neighborhood < guide[city].length; neighborhood++){
+   console.log(guide[city][neighborhood]);
+   }
+}
+
+//for (i=0; i<guide.length;i++){
+   //console.log(guide[i][1]);
+//}
 
 
 /* 15) Back to School
