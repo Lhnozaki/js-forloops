@@ -190,7 +190,7 @@ function copyArray(originArray, destinationArray) {
       //console.log(valuesArray[i]);
       destinationArray.push(originArray[i]);//empty array.push(values that ran through the loop from the original array) <-- this will push each element that ran through the loop of the original array into the new array.
    }
-      return destinationArray;//returns the empty array, now with elements/values.
+      return destinationArray;//returns the empty array, now with new elements/values.
 }
 copyArray(valuesArray, copyValuesArray);
 console.log(copyValuesArray);
@@ -202,14 +202,15 @@ Declare a variable named `topQuote` and assign it to a String value of your favo
 Write a function that will iterate through the string value and return the longest word in that quote. Console.log your result.
 */
 
-var topQuote = "Destiny will arrive."
+var topQuote = "Destiny will arrive"; //starting quote
 
-function longestWord(x){
-   var str = x.split(" ");
-   var y = "";
+function longestWord(str){
+   var arr = str.split(" ");//converts the string x into an array using x.split(" ")
+   var y = "";//create a string that has no length.
+
    for (i=0; i<str.length; i++){
-      if (str.length > y.length){
-         y = str[i];
+      if (arr.length > y.length){
+         y = arr[i];
       }
    }
    return y;
@@ -225,7 +226,21 @@ Write a function named `generateArrayOfStrings` which takes a single argument `s
 
 */
 
+var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush'];
 
+var newArr = [];
+
+function generateArrayOfStrings(storage) {
+   for (i=0; i<storage.length;i++){
+      //console.log(storage[i]);
+      if (storage[i] === 'Carrots' || storage[i] === 'Beets' || storage[i] === "Mush" || storage[i].name === "Todd B."){
+         newArr.push(storage[i]);
+         }
+      }
+      return newArr;
+   }
+generateArrayOfStrings(miscStorage);
+console.log(newArr);
 
 /* 13) All Grown Up 
 Write a function that will capitalize the first letter in each word in the phrase below. The function will console.log the message: "I've Lived A Life That's Full. I've Traveled Each And Every Highway. But More, Much More Than This. I Did It My Way."  
